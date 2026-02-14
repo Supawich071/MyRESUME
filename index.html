@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Persona Resume</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Anton&family=Kanit:wght@300;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="avatar-layer">
+    <img id="scroll-avatar" src="assets/headseq/head_01.png" alt="Avatar">
+</div>
+
+    <div id="intro-loader">
+        <div class="loader-content">
+            <h1 class="loader-text" data-text="PHANTOM">RESUME</h1>
+            <h2 class="loader-sub">
+                <span class="lang-en">LOADING DATA...</span>
+                <span class="lang-th" style="display:none">กำลังโหลดข้อมูล...</span>
+            </h2>
+        </div>
+        <div class="loader-wipe-red"></div>
+    </div>
+
+    <header class="phantom-header">
+        <div class="header-content">
+            <div class="brand-box">
+                <span class="brand-icon">★</span>
+                <h1 class="brand-title">
+                    <span class="lang-en">MY RESUME</span>
+                    <span class="lang-th" style="display:none">เรซูเม่ของผม</span>
+                </h1>
+            </div>
+
+            <div class="lang-switch-container">
+                <button class="lang-btn active" onclick="switchLanguage('en')" id="btn-en">EN</button>
+                <span class="slash">///</span>
+                <button class="lang-btn" onclick="switchLanguage('th')" id="btn-th">TH</button>
+            </div>
+        </div>
+    </header>
+
+    <div class="bg-layer">
+        <div class="bg-shard shard-1"></div>
+        <div class="bg-shard shard-2"></div>
+        <div class="bg-shard shard-3"></div>
+    </div>
+
+    <main class="container">
+        
+        <section class="hero-section reveal-trigger" data-direction="left">
+            <div class="hero-text-box">
+                <h2 class="sub-title">
+                    <span class="lang-en">THE PHANTOM THIEF</span>
+                    <span class="lang-th" style="display:none">จอมโจรแห่งจิตวิญญาณ</span>
+                </h2>
+                <h1 class="main-title p5-animate-text lang-en">SUPAWITㅤㅤBOONNAK</h1>
+                <h1 class="main-title p5-animate-text lang-th" style="display:none">ศุภวิชญ์ บุญนาค</h1>
+                
+                <p class="tagline p5-highlight">
+                    <span class="lang-en">TAKE YOUR HEART</span>
+                    <span class="lang-th" style="display:none">ขโมยหัวใจของคุณ</span>
+                </p>
+            </div>
+            
+            <div class="hero-image-container reveal-trigger" data-direction="right">
+                <div class="profile-frame">
+                    <img src="assets/profile.jpg" class="profile-img" alt="Supawit Profile">
+                </div>
+            </div>
+        </section>
+
+        <section class="stats-section reveal-trigger" data-direction="up">
+            <h2 class="section-header">
+                <span class="p5-glitch-hover lang-en">CONFIDANT STATS</span> 
+                <span class="p5-glitch-hover lang-th" style="display:none">ค่าสถานะความสัมพันธ์</span> 
+                <span class="header-deco">///</span>
+            </h2>
+            <div class="stats-grid">
+                
+                <div class="stat-card" onclick="toggleStat(this)">
+                    <div class="stat-header">
+                        <h3>
+                            <span class="lang-en">KNOWLEDGE</span>
+                            <span class="lang-th" style="display:none">ความรอบรู้</span>
+                        </h3>
+                        <div class="bar-container"><div class="bar" style="width: 90%;"></div></div>
+                        <span class="toggle-icon">+</span>
+                    </div>
+                    <div class="stat-details">
+                        <p>
+                            <strong>
+                                <span class="lang-en">Certificates:</span>
+                                <span class="lang-th" style="display:none">ใบรับรอง:</span>
+                            </strong> 
+                            <span class="lang-en">Computer Science Degree, Google UX Cert.</span>
+                            <span class="lang-th" style="display:none">ปริญญาตรีวิทยาการคอมฯ, Google UX Cert.</span>
+                        </p>
+                        <p>
+                            <strong>
+                                <span class="lang-en">Languages:</span>
+                                <span class="lang-th" style="display:none">ภาษาโปรแกรม:</span>
+                            </strong> 
+                            <span class="lang-en">Python, JavaScript, SQL</span>
+                            <span class="lang-th" style="display:none">Python, JavaScript, SQL</span>
+                        </p>
+                    </div>
+                </div>
+
+                <div class="stat-card" onclick="toggleStat(this)">
+                    <div class="stat-header">
+                        <h3>
+                            <span class="lang-en">GUTS</span>
+                            <span class="lang-th" style="display:none">ความกล้า</span>
+                        </h3>
+                        <div class="bar-container"><div class="bar" style="width: 85%;"></div></div>
+                        <span class="toggle-icon">+</span>
+                    </div>
+                    <div class="stat-details">
+                        <p>
+                            <strong>
+                                <span class="lang-en">Project Mgmt:</span>
+                                <span class="lang-th" style="display:none">การจัดการ:</span>
+                            </strong> 
+                            <span class="lang-en">Agile, Scrum Master</span>
+                            <span class="lang-th" style="display:none">เชี่ยวชาญ Agile และ Scrum</span>
+                        </p>
+                        <p>
+                            <strong>
+                                <span class="lang-en">Soft Skills:</span>
+                                <span class="lang-th" style="display:none">ทักษะเสริม:</span>
+                            </strong> 
+                            <span class="lang-en">Public Speaking, Leadership</span>
+                            <span class="lang-th" style="display:none">การพูดในที่สาธารณะ, ภาวะผู้นำ</span>
+                        </p>
+                    </div>
+                </div>
+
+                <div class="stat-card" onclick="toggleStat(this)">
+                    <div class="stat-header">
+                        <h3>
+                            <span class="lang-en">PROFICIENCY</span>
+                            <span class="lang-th" style="display:none">ความชำนาญ</span>
+                        </h3>
+                        <div class="bar-container"><div class="bar" style="width: 95%;"></div></div>
+                        <span class="toggle-icon">+</span>
+                    </div>
+                    <div class="stat-details">
+                        <p>
+                            <strong>
+                                <span class="lang-en">Tools:</span>
+                                <span class="lang-th" style="display:none">เครื่องมือ:</span>
+                            </strong> 
+                            <span class="lang-en">Figma, VS Code, Docker</span>
+                            <span class="lang-th" style="display:none">Figma, VS Code, Docker</span>
+                        </p>
+                        <p>
+                            <strong>
+                                <span class="lang-en">Specialty:</span>
+                                <span class="lang-th" style="display:none">จุดเด่น:</span>
+                            </strong> 
+                            <span class="lang-en">Frontend Architecture</span>
+                            <span class="lang-th" style="display:none">วางโครงสร้าง Frontend</span>
+                        </p>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <section class="video-section reveal-trigger" data-direction="scale">
+            <div class="video-border-wrapper">
+                <h2 class="video-title">
+                    <span class="lang-en">TARGET: INTRODUCTION</span>
+                    <span class="lang-th" style="display:none">เป้าหมาย: แนะนำตัว</span>
+                </h2>
+                <div class="video-inner">
+                    <video controls src="assets/intro.mp4" poster="assets/video-cover.jpg"></video>
+                </div>
+            </div>
+        </section>
+
+        <section class="history-section reveal-trigger" data-direction="left">
+            <h2 class="section-header">
+                <span class="lang-en">CHRONICLE</span>
+                <span class="lang-th" style="display:none">ประวัติการณ์</span>
+                <span class="header-deco">///</span>
+            </h2>
+            <ul class="timeline">
+                <li class="timeline-item">
+                    <div class="timeline-marker"></div> 
+                    <span class="year">2024</span>
+                    <div class="info">
+                        <strong>
+                            <span class="lang-en">Full Stack Developer</span>
+                            <span class="lang-th" style="display:none">นักพัฒนา Full Stack</span>
+                        </strong>
+                        <span class="place">
+                            <span class="lang-en">at Tech Company</span>
+                            <span class="lang-th" style="display:none">ที่ บริษัทเทคโนโลยีชั้นนำ</span>
+                        </span>
+                    </div>
+                </li>
+                <li class="timeline-item">
+                    <div class="timeline-marker"></div>
+                    <span class="year">2022</span>
+                    <div class="info">
+                        <strong>
+                            <span class="lang-en">UX/UI Designer</span>
+                            <span class="lang-th" style="display:none">ดีไซเนอร์ UX/UI</span>
+                        </strong>
+                        <span class="place">
+                            <span class="lang-en">at Design Studio</span>
+                            <span class="lang-th" style="display:none">ที่ สตูดิโอออกแบบ</span>
+                        </span>
+                    </div>
+                </li>
+            </ul>
+        </section>
+    </main>
+
+    <div class="p5-hud-container">
+        <div class="hud-weather-icon">☀</div> 
+
+        <div class="hud-info-wrapper">
+            <div class="hud-date-box">
+                <div class="hud-month">4</div> <div class="hud-slash">/</div>
+                <div class="hud-day">12</div> </div>
+            
+            <div class="hud-sub-text">
+                <div class="hud-day-text">
+                    <span class="lang-en">MON</span>
+                    <span class="lang-th" style="display:none">จันทร์</span>
+                </div>
+                <div class="hud-time-of-day">
+                    <span class="lang-en">AFTER SCHOOL</span>
+                    <span class="lang-th" style="display:none">หลังเลิกเรียน</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <section class="requests-section container reveal-trigger" data-direction="up">
+        <h2 class="section-header">
+            <span class="lang-en">PHANTOM REQUESTS</span>
+            <span class="lang-th" style="display:none">ภารกิจที่ได้รับ</span>
+            <span class="header-deco">///</span>
+        </h2>
+        <div class="requests-grid">
+            
+            <div class="request-card">
+                <div class="req-paper">
+                    <div class="req-header">
+                        <span class="rank">RANK S</span>
+                        <span class="date">10/25</span>
+                    </div>
+                    <h3>
+                        <span class="lang-en">E-COMMERCE PLATFORM</span>
+                        <span class="lang-th" style="display:none">ระบบอีคอมเมิร์ซ</span>
+                    </h3>
+                    <p class="target">
+                        <span class="lang-en">Target: Full-stack</span>
+                        <span class="lang-th" style="display:none">เป้าหมาย: Full-stack</span>
+                    </p>
+                    <p class="desc">
+                        <span class="lang-en">Create a complete online store system supporting payment and stock.</span>
+                        <span class="lang-th" style="display:none">สร้างระบบร้านค้าออนไลน์ครบวงจร รองรับการชำระเงินและจัดการสต็อก</span>
+                    </p>
+                    <div class="req-stamp">COMPLETE</div>
+                </div>
+                <div class="req-tape"></div>
+            </div>
+
+            <div class="request-card">
+                <div class="req-paper">
+                    <div class="req-header">
+                        <span class="rank">RANK A</span>
+                        <span class="date">08/12</span>
+                    </div>
+                    <h3>
+                        <span class="lang-en">MOBILE BANKING APP</span>
+                        <span class="lang-th" style="display:none">แอปธนาคาร</span>
+                    </h3>
+                    <p class="target">
+                        <span class="lang-en">Target: UI/UX Design</span>
+                        <span class="lang-th" style="display:none">เป้าหมาย: ออกแบบ UX/UI</span>
+                    </p>
+                    <p class="desc">
+                        <span class="lang-en">Design a secure and user-friendly banking experience.</span>
+                        <span class="lang-th" style="display:none">ออกแบบประสบการณ์ผู้ใช้แอปธนาคาร เน้นความปลอดภัยและใช้ง่าย</span>
+                    </p>
+                    <div class="req-stamp">MISSION CLEAR</div>
+                </div>
+                <div class="req-tape"></div>
+            </div>
+
+             <div class="request-card">
+                <div class="req-paper">
+                    <div class="req-header">
+                        <span class="rank">RANK B</span>
+                        <span class="date">05/01</span>
+                    </div>
+                    <h3>
+                        <span class="lang-en">PORTFOLIO WEBSITE</span>
+                        <span class="lang-th" style="display:none">เว็บพอร์ตโฟลิโอ</span>
+                    </h3>
+                    <p class="target">
+                        <span class="lang-en">Target: Animation</span>
+                        <span class="lang-th" style="display:none">เป้าหมาย: อนิเมชั่น</span>
+                    </p>
+                    <p class="desc">
+                        <span class="lang-en">A Persona 5 themed portfolio to showcase CSS skills.</span>
+                        <span class="lang-th" style="display:none">เว็บพอร์ตโฟลิโอสไตล์ Persona 5 เพื่อแสดงทักษะ CSS (เหมือนเว็บนี้!)</span>
+                    </p>
+                    </div>
+                <div class="req-tape"></div>
+            </div>
+
+        </div>
+    </section>
+    
+    <div class="phantom-sidebar">
+        <div class="scroll-progress-bar"></div>
+        <div class="scroll-text">SCROLL DISTANCE</div>
+        <div class="sidebar-decor-top"></div>
+        <div class="sidebar-decor-bottom"></div>
+    </div>
+
+    <div class="cursor-dot"></div>
+    <div class="cursor-circle"></div>
+
+    <button class="phantom-btn-floating" onclick="toggleContact()">
+        <span class="lang-en">CONTACT ME</span>
+        <span class="lang-th" style="display:none">ติดต่อฉัน</span>
+    </button>
+
+    <div id="contact-overlay" class="contact-overlay">
+        <div class="calling-card-wrapper">
+            <div class="calling-card">
+                <div class="card-logo">PHANTOM</div>
+                <h2>
+                    <span class="lang-en">TAKE YOUR HEART</span>
+                    <span class="lang-th" style="display:none">ขโมยหัวใจของคุณ</span>
+                </h2>
+                <p>
+                    <span class="lang-en">Sir, I have received your interest.</span>
+                    <span class="lang-th" style="display:none">เรียนท่าน, ผมได้รับความสนใจจากท่านแล้ว</span>
+                </p>
+                <div class="contact-info">
+                    <p>EMAIL: <a href="mailto:yourname@email.com" style="color:var(--p-white); text-decoration:none;">supawadew60@email.com</a></p>
+                    <p>TEL: <a href="tel:0999999999" style="color:var(--p-black); text-decoration:none;">064-813-3223</a></p>
+                </div>
+                <button class="close-btn" onclick="toggleContact()">
+                    <span class="lang-en">CLOSE</span>
+                    <span class="lang-th" style="display:none">ปิด</span>
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
