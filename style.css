@@ -1173,4 +1173,173 @@ html {
         font-size: 0.9rem;
     }
 }
+
+/* ==========================================================================
+   MOBILE UI OVERRIDE (วางล่างสุดของไฟล์ เพื่อทับทุกคำสั่ง)
+   ========================================================================== */
+@media (max-width: 900px) {
+
+    /* --- 1. GLOBAL RESET FOR MOBILE (ล้างค่าที่ใหญ่เกินไป) --- */
+    html {
+        font-size: 14px !important; /* ลดขนาด Base Font ลง */
+    }
+
+    .container {
+        padding: 20px 15px; /* ลดขอบข้าง */
+        width: 100%;
+        max-width: 100vw;
+        overflow-x: hidden; /* ห้ามมี Scroll แนวนอนเด็ดขาด */
+    }
+
+    /* ซ่อน Element ของ PC ที่เกะกะ */
+    .phantom-sidebar, 
+    .cursor-dot, 
+    .cursor-circle {
+        display: none !important;
+    }
+
+    /* --- 2. HERO SECTION (จัดเรียงใหม่เป็นแนวตั้ง) --- */
+    .hero-section {
+        flex-direction: column-reverse; /* เอา Text ขึ้นก่อน หรือเอาภาพขึ้นก่อนตามชอบ */
+        padding-top: 100px; /* เว้นที่ให้ HUD ด้านบน */
+        gap: 40px;
+        min-height: auto;
+    }
+
+    .hero-text-box {
+        width: 100%;
+        transform: skew(0deg); /* ลบการเอียงออกเพื่อให้อ่านง่ายในมือถือ */
+        padding: 2rem 1.5rem;
+        border-width: 3px;
+    }
+
+    .main-title {
+        font-size: 3.5rem; /* ลดขนาดชื่อ */
+        word-break: break-word; /* ตัดคำถ้ายาวเกิน */
+    }
+
+    .sub-title {
+        font-size: 1.2rem;
+    }
+
+    /* รูปโปรไฟล์ในมือถือ */
+    .hero-image-container {
+        width: 100%;
+        flex: none;
+        display: flex;
+        justify-content: center;
+    }
+
+    .profile-frame {
+        width: 280px;
+        height: 350px;
+        transform: rotate(-2deg); /* เอียงนิดเดียวพอ */
+        border-width: 4px;
+    }
+
+    /* --- 3. HUD (ย่อส่วนและย้ายตำแหน่ง) --- */
+    .p5-hud-container {
+        top: 10px;
+        left: 50%;
+        transform: translateX(-50%) scale(0.6); /* ย่อเหลือ 60% และจัดกลาง */
+        transform-origin: top center;
+        width: max-content;
+        /* พื้นหลังจางๆ เพื่อให้อ่านวันที่ออก */
+        background: rgba(0,0,0,0.5);
+        padding: 5px 15px;
+        border-radius: 20px;
+        border: 1px solid rgba(255,255,255,0.2);
+    }
+    
+    .hud-weather-icon {
+        margin-top: 0;
+        font-size: 3rem;
+    }
+
+    /* --- 4. STATS & REQUESTS (เปลี่ยน Grid เป็นแถวเดียว) --- */
+    .stats-grid, 
+    .requests-grid {
+        grid-template-columns: 1fr; /* 1 คอลัมน์เต็ม */
+        gap: 20px;
+    }
+
+    .stat-card {
+        transform: skew(0deg); /* ยกเลิกเอียง */
+        border-left-width: 5px;
+    }
+    
+    .stat-header {
+        padding: 15px;
+    }
+
+    /* --- 5. TIMELINE --- */
+    .timeline {
+        margin-left: 10px;
+        border-left-width: 2px;
+    }
+    
+    .timeline-item {
+        padding-left: 20px;
+        margin-bottom: 40px;
+    }
+    
+    .year {
+        font-size: 2.5rem;
+    }
+
+    /* --- 6. VIDEO --- */
+    .video-section {
+        margin-top: 4rem;
+    }
+    
+    .video-border-wrapper {
+        width: 100%;
+        margin-left: 0;
+        transform: none; /* ยกเลิกเอียง */
+        border-width: 3px;
+    }
+    
+    .video-title {
+        position: relative;
+        top: 0;
+        left: 0;
+        transform: none;
+        display: block;
+        text-align: center;
+        width: 100%;
+        margin-bottom: 10px;
+    }
+
+    /* --- 7. HEADER & LANGUAGE BUTTON --- */
+    .phantom-header {
+        padding: 10px;
+        background: rgba(0,0,0,0.8); /* ถมดำพื้นหลังเมนูให้อ่านง่าย */
+    }
+
+    .brand-title {
+        font-size: 1rem;
+    }
+
+    .lang-switch-container {
+        padding: 5px 10px;
+    }
+
+    /* --- 8. FLOATING BUTTON --- */
+    .phantom-btn-floating {
+        width: 90%; /* ปุ่มกว้างเกือบเต็มจอ กดง่าย */
+        left: 5%;
+        bottom: 20px;
+        text-align: center;
+        padding: 15px 0;
+        transform: skew(0deg); /* ไม่เอียง */
+        font-size: 1.2rem;
+    }
+
+    /* --- 9. AVATAR LAYER (ลดความเด่นลง) --- */
+    .avatar-layer {
+        opacity: 0.2; /* จางลงมาก */
+        right: -20%;
+        height: 50vh;
+    }
+}
 /* End of File */
